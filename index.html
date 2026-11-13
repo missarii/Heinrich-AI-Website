@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heinrich AI – Autonomous Coding Agent for VS Code | Free Extension</title>
+  <meta name="description" content="Heinrich AI is the free autonomous coding agent for VS Code. It plans, edits files, runs commands, and ships software with full human control. Powered by Overthink and Mila MCP servers. Install now." />
+  <meta name="keywords" content="Heinrich AI, Heinrich, heinrich ai, autonomous coding agent, VS Code AI extension, AI coding agent, free VS Code AI" />
+  <meta name="author" content="Heinrich AI" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://heinrich-ai.surge.sh/" />
+  <link rel="alternate" href="https://heinrich-ai.surge.sh/" hreflang="en" />
+  <link rel="alternate" href="https://web.heinrich-ai.workers.dev/" hreflang="en" />
+  <meta name="theme-color" content="#0a0f0a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Heinrich AI" />
+  <meta property="og:title" content="Heinrich AI – Autonomous Coding Agent for VS Code" />
+  <meta property="og:description" content="Free autonomous coding agent for VS Code. Plans, executes, and ships software while you stay in control." />
+  <meta property="og:url" content="https://heinrich-ai.surge.sh/" />
+  <meta property="og:image" content="https://heinrich-ai.surge.sh/Images/heinrich-logo.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Heinrich AI – Autonomous Coding Agent for VS Code" />
+  <meta name="twitter:description" content="Free autonomous AI coding agent for VS Code. Plan, act, verify and ship with full transparency." />
+  <meta name="twitter:image" content="https://heinrich-ai.surge.sh/Images/heinrich-logo.png" />
+  <link rel="icon" type="image/png" href="Images/heinrich-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://heinrich-ai.surge.sh/#website","url":"https://heinrich-ai.surge.sh/","name":"Heinrich AI","description":"Official website of Heinrich AI – the autonomous coding agent for VS Code.","publisher":{"@id":"https://heinrich-ai.surge.sh/#organization"},"inLanguage":"en-US"},{"@type":"Organization","@id":"https://heinrich-ai.surge.sh/#organization","name":"Heinrich AI","alternateName":["Heinrich","heinrich ai","HeinrichAI"],"url":"https://heinrich-ai.surge.sh/","logo":{"@type":"ImageObject","url":"https://heinrich-ai.surge.sh/Images/heinrich-logo.png","width":512,"height":512},"sameAs":["https://github.com/missarii/Heinrich-AI","https://github.com/missarii/Heinrich-AI-Website","https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai","https://web.heinrich-ai.workers.dev/","https://github.com/missarii/overthink","https://github.com/missarii/Mila"]},{"@type":"SoftwareApplication","@id":"https://heinrich-ai.surge.sh/#software","name":"Heinrich AI","alternateName":["Heinrich","heinrich ai"],"applicationCategory":"DeveloperApplication","operatingSystem":"Windows, macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Heinrich AI is a free autonomous coding agent for Visual Studio Code. It plans tasks, edits files, runs terminal commands, uses the browser, and works with MCP servers while keeping the developer in full control.","url":"https://heinrich-ai.surge.sh/","downloadUrl":"https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai","author":{"@id":"https://heinrich-ai.surge.sh/#organization"},"publisher":{"@id":"https://heinrich-ai.surge.sh/#organization"},"featureList":["Autonomous planning and execution inside VS Code","Multi-provider LLM support","MCP-native (Overthink + Mila)","File editing, terminal commands, browser automation","Human-in-the-loop approvals and git checkpoints"]},{"@type":"WebPage","@id":"https://heinrich-ai.surge.sh/#webpage","url":"https://heinrich-ai.surge.sh/","name":"Heinrich AI – Autonomous Coding Agent for VS Code","isPartOf":{"@id":"https://heinrich-ai.surge.sh/#website"},"about":{"@id":"https://heinrich-ai.surge.sh/#software"},"description":"Official home of Heinrich AI, the free autonomous coding agent for Visual Studio Code.","inLanguage":"en-US"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Heinrich AI?","acceptedAnswer":{"@type":"Answer","text":"Heinrich AI is a free autonomous coding agent that runs inside Visual Studio Code. It plans, explores your codebase, edits files, runs commands, and can use a browser — always with your approval."}},{"@type":"Question","name":"Is Heinrich AI free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Heinrich AI extension is free to install from the Visual Studio Marketplace. You bring your own API keys for the LLM providers you choose."}},{"@type":"Question","name":"How do I install Heinrich AI?","acceptedAnswer":{"@type":"Answer","text":"Open the Visual Studio Marketplace, search for Heinrich AI, or search Heinrich AI inside the VS Code Extensions view."}},{"@type":"Question","name":"What are Overthink and Mila?","acceptedAnswer":{"@type":"Answer","text":"Overthink is an MCP server that adds strict discipline to AI coding agents. Mila is an MCP toolkit for production-grade UI/UX intelligence. Both work with Heinrich AI."}}]}]}
+  </script>
+</head>
+<body>
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb-3" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="glass-layer glass-layer-1" aria-hidden="true"></div>
+  <div class="glass-layer glass-layer-2" aria-hidden="true"></div>
+  <div class="glass-layer glass-layer-3" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Heinrich AI home">
+        <img src="Images/heinrich-logo.png" alt="Heinrich AI logo" class="logo-img" width="36" height="36" />
+        <span class="logo-text">Heinrich AI</span>
+      </a>
+      <nav class="nav">
+        <a href="#product">Product</a>
+        <a href="#ecosystem">Ecosystem</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" class="btn btn-primary" target="_blank" rel="noopener">Install Extension</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-content">
+        <div class="hero-logo-wrap reveal">
+          <img src="Images/heinrich-logo.png" alt="Heinrich AI" class="hero-logo" width="96" height="96" />
+        </div>
+        <p class="eyebrow reveal">Autonomous Coding Agent · VS Code Extension</p>
+        <h1 class="hero-title">
+          <span class="line reveal">Heinrich AI — Code that thinks.</span>
+          <span class="line reveal">Work that finishes.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          <strong>Heinrich AI</strong> is the free autonomous coding agent for VS Code.
+          It plans, explores your codebase, edits files, runs commands, and ships working software —
+          while you stay in full control. Search “Heinrich AI” in the Marketplace or install below.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Install for VS Code</a>
+          <a href="#ecosystem" class="btn btn-ghost btn-lg">Explore ecosystem</a>
+        </div>
+        <p class="hero-note reveal" style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+          Available now on the <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">Visual Studio Marketplace</a>
+        </p>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section id="product" class="section product glass-panel">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow reveal">The Product</p>
+          <h2 class="reveal">An agent that works inside your editor</h2>
+          <p class="section-desc reveal">
+            Heinrich AI is not another chat window. It is a full autonomous agent
+            that understands your workspace, runs tools, manages tasks, and
+            keeps a complete record of every action — available as a free VS Code extension.
+          </p>
+        </div>
+        <div class="product-grid">
+          <div class="product-card reveal">
+            <div class="card-icon">01</div>
+            <h3>Plan & Act</h3>
+            <p>Separate planning and execution modes let you review strategy before the agent starts changing code.</p>
+          </div>
+          <div class="product-card reveal">
+            <div class="card-icon">02</div>
+            <h3>Deep Workspace Awareness</h3>
+            <p>Heinrich AI sees your files, terminals, git state, and context. It works with the project you already have open.</p>
+          </div>
+          <div class="product-card reveal">
+            <div class="card-icon">03</div>
+            <h3>Tool Execution</h3>
+            <p>File edits, terminal commands, browser automation, MCP servers — all under your approval controls.</p>
+          </div>
+          <div class="product-card reveal">
+            <div class="card-icon">04</div>
+            <h3>Checkpoints & Recovery</h3>
+            <p>Git-based checkpoints after every significant action. Resume interrupted tasks without losing progress.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecosystem" class="section ecosystem">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow reveal">Ecosystem</p>
+          <h2 class="reveal">MCP servers built for Heinrich AI</h2>
+          <p class="section-desc reveal">
+            Extend Heinrich with purpose-built Model Context Protocol servers from the same team.
+            Connect them in MCP settings and unlock disciplined problem-solving and production-grade UI intelligence.
+          </p>
+        </div>
+        <div class="ecosystem-grid">
+          <article class="eco-card glass-panel reveal">
+            <div class="eco-card-top">
+              <img src="https://raw.githubusercontent.com/missarii/overthink/main/src/overthink-logo.png" alt="Overthink logo" class="eco-logo" width="72" height="72" loading="lazy" />
+              <div class="eco-badge">MCP Server</div>
+            </div>
+            <h3>Overthink</h3>
+            <p class="eco-tagline">Strict discipline layer for AI coding agents</p>
+            <p class="eco-desc">Overthink is a control layer that forces the agent to triage first, investigate with evidence, take one useful action at a time, avoid loops, and verify before claiming success. Purpose-built for Heinrich AI.</p>
+            <div class="eco-actions">
+              <a href="https://github.com/missarii/overthink" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+          </article>
+          <article class="eco-card glass-panel reveal">
+            <div class="eco-card-top">
+              <img src="https://raw.githubusercontent.com/missarii/Mila/main/Mila_Logo.png" alt="Mila logo" class="eco-logo" width="72" height="72" loading="lazy" />
+              <div class="eco-badge">MCP Server · Toolkit</div>
+            </div>
+            <h3>Mila</h3>
+            <p class="eco-tagline">AI UI/UX intelligence for autonomous agents</p>
+            <p class="eco-desc">Mila teaches coding agents how to build beautiful, production-ready interfaces with mathematical precision. Ready for Heinrich, Cursor, Claude Code, and more.</p>
+            <div class="eco-actions">
+              <a href="https://github.com/missarii/Mila" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section features">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow reveal">Capabilities</p>
+          <h2 class="reveal">Built for serious engineering work</h2>
+        </div>
+        <div class="features-list">
+          <div class="feature-row">
+            <div class="feature-text reveal">
+              <h3>Multi-provider intelligence</h3>
+              <p>Anthropic, OpenRouter, AWS Bedrock, Gemini, Cerebras, Ollama, LM Studio, and VS Code’s own models.</p>
+            </div>
+          </div>
+          <div class="feature-row reverse">
+            <div class="feature-text reveal">
+              <h3>MCP-native ecosystem</h3>
+              <p>Connect Overthink for disciplined workflows and Mila for UI/UX intelligence — or any community MCP server.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <div class="feature-text reveal">
+              <h3>Streaming and real-time feedback</h3>
+              <p>Watch the agent reason and act in real time. Partial updates, tool approval flows, and clear visibility into every step.</p>
+            </div>
+          </div>
+          <div class="feature-row reverse">
+            <div class="feature-text reveal">
+              <h3>Task history and continuity</h3>
+              <p>Every conversation and action is preserved. Resume work days later with full context.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section how glass-panel">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow reveal">Workflow</p>
+          <h2 class="reveal">From request to result</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">01</div>
+            <h3>Install the extension</h3>
+            <p>Get Heinrich AI free from the <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" target="_blank" rel="noopener" style="color: var(--accent);">VS Code Marketplace</a>.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">02</div>
+            <h3>Describe the outcome</h3>
+            <p>Tell Heinrich AI what you want built, fixed, or explored. Natural language is enough.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">03</div>
+            <h3>Review the plan and approve</h3>
+            <p>Examine the steps, tools, and files the agent intends to touch. Nothing runs without your approval.</p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">04</div>
+            <h3>Inspect and continue</h3>
+            <p>Review diffs, checkpoints, and the full action record. Iterate with full context retained.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="philosophy" class="section philosophy">
+      <div class="container">
+        <div class="philosophy-inner">
+          <p class="eyebrow reveal">Philosophy</p>
+          <h2 class="reveal">An agent that stays honest</h2>
+          <p class="lead reveal">Heinrich AI is designed so you always understand what happened and why. Approvals are explicit. Actions are logged. Checkpoints are recoverable. The goal is not to replace the engineer — it is to amplify disciplined engineering.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section philosophy" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow reveal">FAQ</p>
+          <h2 id="faq-heading" class="reveal">Frequently asked questions about Heinrich AI</h2>
+        </div>
+        <div class="principles" style="max-width: 800px; margin: 0 auto;">
+          <div class="principle reveal">
+            <h3>What is Heinrich AI?</h3>
+            <p>Heinrich AI is a free autonomous coding agent extension for Visual Studio Code. It plans tasks, reads your project, edits files, runs terminal commands, and can control a browser — always with your explicit approval.</p>
+          </div>
+          <div class="principle reveal">
+            <h3>Is Heinrich AI free to use?</h3>
+            <p>Yes. The extension is free on the Visual Studio Marketplace. You supply API keys for the providers you want.</p>
+          </div>
+          <div class="principle reveal">
+            <h3>How do I install Heinrich AI?</h3>
+            <p>Go to the <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" target="_blank" rel="noopener" style="color: var(--accent);">VS Code Marketplace page</a>, or search for <strong>Heinrich AI</strong> in the VS Code Extensions view.</p>
+          </div>
+          <div class="principle reveal">
+            <h3>What makes Heinrich different?</h3>
+            <p>Human-in-the-loop control, git checkpoints, full action history, multi-provider support, and a native MCP ecosystem (Overthink + Mila). Built for serious engineering.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-started" class="section cta">
+      <div class="container">
+        <div class="cta-box glass-panel reveal">
+          <img src="Images/heinrich-logo.png" alt="" class="cta-logo" width="56" height="56" />
+          <h2>Install Heinrich AI in VS Code</h2>
+          <p>Download the free extension from the Visual Studio Marketplace. Pair it with Overthink and Mila for a full autonomous engineering stack.</p>
+          <div class="cta-actions">
+            <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Get it on VS Code Marketplace</a>
+            <a href="https://github.com/missarii/Heinrich-AI" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+          <p style="margin-top: 1.25rem; font-size: 0.85rem; color: var(--text-muted);">Or search “Heinrich AI” in the VS Code Extensions view</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="Images/heinrich-logo.png" alt="Heinrich AI" class="logo-img" width="28" height="28" />
+        <span>Heinrich AI</span>
+      </div>
+      <div class="footer-links" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
+        <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Marketplace</a>
+        <a href="https://github.com/missarii/overthink" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Overthink</a>
+        <a href="https://github.com/missarii/Mila" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Mila</a>
+        <a href="https://github.com/missarii/Heinrich-AI" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">GitHub</a>
+        <p class="footer-copy" style="margin: 0;">© 2026 Heinrich AI. Built for engineers who ship.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
