@@ -41,11 +41,23 @@ body {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 90% 60% at 50% -15%, rgba(124, 255, 107, 0.07), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 85% 70%, rgba(80, 100, 140, 0.06), transparent),
-    radial-gradient(ellipse 40% 30% at 15% 50%, rgba(124, 255, 107, 0.03), transparent);
+    radial-gradient(ellipse 90% 60% at 50% -15%, rgba(124, 255, 107, 0.09), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 85% 70%, rgba(80, 100, 140, 0.07), transparent),
+    radial-gradient(ellipse 40% 30% at 15% 50%, rgba(124, 255, 107, 0.04), transparent);
   pointer-events: none;
   z-index: 0;
+  animation: gradientDrift 22s ease-in-out infinite alternate;
+}
+
+@keyframes gradientDrift {
+  0% {
+    background-position: 0% 0%, 100% 50%, 0% 100%;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    background-position: 20% 10%, 80% 60%, 10% 80%;
+    filter: hue-rotate(12deg);
+  }
 }
 
 .bg-noise {
@@ -54,7 +66,82 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 0;
-  opacity: 0.45;
+  opacity: 0.4;
+}
+
+/* Animated perspective grid overlay */
+.bg-grid {
+  position: fixed;
+  inset: -10%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+  background-image:
+    linear-gradient(rgba(124, 255, 107, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124, 255, 107, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  transform: perspective(900px) rotateX(58deg) scale(1.6) translateY(-8%);
+  transform-origin: center top;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 25%, black 70%, transparent 100%);
+  animation: gridScroll 28s linear infinite;
+}
+
+@keyframes gridScroll {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 0 64px, 64px 0; }
+}
+
+/* Soft floating orbs for depth */
+.bg-orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(60px);
+  will-change: transform, opacity;
+}
+
+.bg-orb-1 {
+  width: min(48vw, 520px);
+  height: min(48vw, 520px);
+  top: -8%;
+  left: -6%;
+  background: radial-gradient(circle, rgba(124, 255, 107, 0.14), transparent 70%);
+  animation: orbFloat1 18s ease-in-out infinite;
+}
+
+.bg-orb-2 {
+  width: min(40vw, 440px);
+  height: min(40vw, 440px);
+  bottom: 5%;
+  right: -4%;
+  background: radial-gradient(circle, rgba(90, 140, 200, 0.12), transparent 70%);
+  animation: orbFloat2 22s ease-in-out infinite;
+}
+
+.bg-orb-3 {
+  width: min(32vw, 360px);
+  height: min(32vw, 360px);
+  top: 42%;
+  left: 48%;
+  background: radial-gradient(circle, rgba(124, 255, 107, 0.08), transparent 70%);
+  animation: orbFloat3 16s ease-in-out infinite;
+}
+
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.85; }
+  50% { transform: translate(6%, 10%) scale(1.12); opacity: 1; }
+}
+
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.75; }
+  50% { transform: translate(-8%, -6%) scale(1.08); opacity: 1; }
+}
+
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  50% { transform: translate(-40%, -60%) scale(1.2); opacity: 0.9; }
 }
 
 #stars {
@@ -64,6 +151,15 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.95;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-gradient,
+  .bg-grid,
+  .bg-orb {
+    animation: none !important;
+  }
 }
 
 /* Cinematic glass depth layers that move on scroll */
@@ -348,7 +444,6 @@ body {
   z-index: 2;
 }
 
-/* Glass panels — cinematic stacked sections */
 .glass-panel {
   position: relative;
 }
@@ -391,7 +486,6 @@ body {
   font-size: 1.05rem;
 }
 
-/* Product grid */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -437,7 +531,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Features */
 .features-list {
   display: flex;
   flex-direction: column;
@@ -538,7 +631,6 @@ body {
   filter: saturate(1) brightness(0.95);
 }
 
-/* How it works */
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -577,7 +669,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Philosophy */
 .philosophy-inner {
   max-width: 720px;
 }
@@ -615,7 +706,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* CTA */
 .cta-box {
   text-align: center;
   padding: 4rem 2rem;
@@ -676,7 +766,6 @@ body {
   position: relative;
 }
 
-/* Footer */
 .footer {
   padding: 3rem 0;
   border-top: 1px solid var(--border);
@@ -711,7 +800,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Ecosystem */
 .ecosystem-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -849,7 +937,6 @@ body {
   }
 }
 
-/* Reveal animations */
 .reveal {
   opacity: 0;
   transform: translateY(36px);
@@ -871,7 +958,6 @@ body {
 .step.reveal:nth-child(3) { transition-delay: 0.19s; }
 .step.reveal:nth-child(4) { transition-delay: 0.26s; }
 
-/* Responsive */
 @media (max-width: 800px) {
   .nav {
     display: none;
