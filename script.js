@@ -1,4 +1,16 @@
 (function () {
+  // ── Service worker: image cache (Cache API) ──
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () =>
+      navigator
+        .serviceWorker.register("/sw.js")
+        .then(
+          (reg) => console.log("[Heinrich] Service worker registered", reg.scope),
+          (err) => console.warn("[Heinrich] Service worker registration failed", err)
+        )
+    );
+  }
+
   const header = document.getElementById("header");
   const layers = document.querySelectorAll(".glass-layer");
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
