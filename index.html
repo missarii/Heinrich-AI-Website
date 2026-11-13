@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Heinrich AI — Autonomous Coding Agent</title>
-  <meta name="description" content="Heinrich AI is the autonomous coding agent for VS Code. Plan, act, and ship with intelligent task execution, multi-provider support, and deep workspace awareness. Download free from the VS Code Marketplace." />
+  <meta name="description" content="Heinrich AI is the autonomous coding agent for VS Code. Powered by Overthink (discipline MCP) and Mila (UI/UX intelligence MCP). Plan, act, and ship with multi-provider support." />
   <link rel="icon" type="image/png" href="Images/heinrich-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,6 @@
   <div class="bg-noise"></div>
   <canvas id="stars" aria-hidden="true"></canvas>
 
-  <!-- Cinematic glass depth layers -->
   <div class="glass-layer glass-layer-1" aria-hidden="true"></div>
   <div class="glass-layer glass-layer-2" aria-hidden="true"></div>
   <div class="glass-layer glass-layer-3" aria-hidden="true"></div>
@@ -29,6 +28,7 @@
       </a>
       <nav class="nav">
         <a href="#product">Product</a>
+        <a href="#ecosystem">Ecosystem</a>
         <a href="#features">Features</a>
         <a href="#how-it-works">How it works</a>
         <a href="#philosophy">Philosophy</a>
@@ -38,7 +38,6 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero" id="hero">
       <div class="container hero-content">
         <div class="hero-logo-wrap reveal">
@@ -56,7 +55,7 @@
         </p>
         <div class="hero-cta reveal">
           <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Install for VS Code</a>
-          <a href="#product" class="btn btn-ghost btn-lg">Explore the product</a>
+          <a href="#ecosystem" class="btn btn-ghost btn-lg">Explore ecosystem</a>
         </div>
         <p class="hero-note reveal" style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
           Available now on the <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">Visual Studio Marketplace</a>
@@ -68,7 +67,6 @@
       </div>
     </section>
 
-    <!-- Product — glass panel -->
     <section id="product" class="section product glass-panel">
       <div class="container">
         <div class="section-header">
@@ -84,7 +82,7 @@
         <div class="product-grid">
           <div class="product-card reveal">
             <div class="card-icon">01</div>
-            <h3>Plan & Act</h3>
+            <h3>Plan &amp; Act</h3>
             <p>Separate planning and execution modes let you review strategy before the agent starts changing code.</p>
           </div>
           <div class="product-card reveal">
@@ -99,14 +97,95 @@
           </div>
           <div class="product-card reveal">
             <div class="card-icon">04</div>
-            <h3>Checkpoints & Recovery</h3>
+            <h3>Checkpoints &amp; Recovery</h3>
             <p>Git-based checkpoints after every significant action. Resume interrupted tasks without losing progress.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Features -->
+    <!-- Ecosystem: Overthink + Mila -->
+    <section id="ecosystem" class="section ecosystem">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow reveal">Ecosystem</p>
+          <h2 class="reveal">MCP servers built for Heinrich AI</h2>
+          <p class="section-desc reveal">
+            Extend Heinrich with purpose-built Model Context Protocol servers from the same team.
+            Connect them in MCP settings and unlock disciplined problem-solving and production-grade UI intelligence.
+          </p>
+        </div>
+
+        <div class="ecosystem-grid">
+          <!-- Overthink -->
+          <article class="eco-card glass-panel reveal">
+            <div class="eco-card-top">
+              <img
+                src="https://raw.githubusercontent.com/missarii/overthink/main/src/overthink-logo.png"
+                alt="Overthink logo"
+                class="eco-logo"
+                width="72"
+                height="72"
+                loading="lazy"
+              />
+              <div class="eco-badge">MCP Server</div>
+            </div>
+            <h3>Overthink</h3>
+            <p class="eco-tagline">Strict discipline layer for AI coding agents</p>
+            <p class="eco-desc">
+              Overthink is not another LLM — it is a control layer that forces the agent to triage first,
+              investigate with evidence, take one useful action at a time, avoid loops, verify before
+              claiming success, and finish on time. Purpose-built for Heinrich AI.
+            </p>
+            <ul class="eco-features">
+              <li><strong>Fast triage</strong> — complexity level, time box, and budgets before any work starts</li>
+              <li><strong>Action Guard</strong> — blocks wasteful patterns, side-paths, and risky commands</li>
+              <li><strong>Evidence first</strong> — diagnosis and verification engines reject guesswork</li>
+              <li><strong>Anti-loop</strong> — progress tracking detects stagnation and forces a stop</li>
+              <li><strong>Mandatory verify</strong> — only real test/build results count as done</li>
+            </ul>
+            <div class="eco-actions">
+              <a href="https://github.com/missarii/overthink" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+              <a href="https://github.com/missarii/overthink#how-to-connect-overthink-mcp-to-heinrich-ai" class="btn btn-ghost" target="_blank" rel="noopener">Connect to Heinrich</a>
+            </div>
+          </article>
+
+          <!-- Mila -->
+          <article class="eco-card glass-panel reveal">
+            <div class="eco-card-top">
+              <img
+                src="https://raw.githubusercontent.com/missarii/Mila/main/Mila_Logo.png"
+                alt="Mila logo"
+                class="eco-logo"
+                width="72"
+                height="72"
+                loading="lazy"
+              />
+              <div class="eco-badge">MCP Server · Toolkit</div>
+            </div>
+            <h3>Mila</h3>
+            <p class="eco-tagline">AI UI/UX intelligence for autonomous agents</p>
+            <p class="eco-desc">
+              Mila teaches coding agents how to build beautiful, production-ready interfaces with
+              mathematical precision and zero “AI slop”. Component registry, design rules, code review,
+              and seven MCP tools — ready for Heinrich, Cursor, Claude Code, and more.
+            </p>
+            <ul class="eco-features">
+              <li><strong>Component registry</strong> — curated React/Tailwind components and templates</li>
+              <li><strong>Design rules</strong> — typography, 8pt grid, color, motion, anti-patterns</li>
+              <li><strong>7 MCP tools</strong> — search, get component, themes, review, auto-fix</li>
+              <li><strong>Theme generation</strong> — accessible palettes and Tailwind v4 <code>@theme</code> blocks</li>
+              <li><strong>Code auditor</strong> — scores UI quality and suggests concrete fixes</li>
+            </ul>
+            <div class="eco-actions">
+              <a href="https://github.com/missarii/Mila" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+              <a href="https://github.com/missarii/Mila#connect-to-ai-agents" class="btn btn-ghost" target="_blank" rel="noopener">Connect to agents</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="features" class="section features">
       <div class="container">
         <div class="section-header">
@@ -130,8 +209,8 @@
 
           <div class="feature-row reverse">
             <div class="feature-text reveal">
-              <h3>MCP-native</h3>
-              <p>Connect external tools and data sources through the Model Context Protocol. Heinrich AI becomes the orchestration layer for your entire toolchain.</p>
+              <h3>MCP-native ecosystem</h3>
+              <p>Connect external tools through the Model Context Protocol. Pair Heinrich with <a href="https://github.com/missarii/overthink" target="_blank" rel="noopener" style="color: var(--accent);">Overthink</a> for disciplined workflows and <a href="https://github.com/missarii/Mila" target="_blank" rel="noopener" style="color: var(--accent);">Mila</a> for UI/UX intelligence — or any community MCP server.</p>
             </div>
             <div class="feature-visual reveal">
               <div class="visual-box glass-float">
@@ -143,7 +222,7 @@
 
           <div class="feature-row">
             <div class="feature-text reveal">
-              <h3>Streaming & real-time feedback</h3>
+              <h3>Streaming &amp; real-time feedback</h3>
               <p>Watch the agent reason and act in real time. Partial updates, tool approval flows, and clear visibility into every step.</p>
             </div>
             <div class="feature-visual reveal">
@@ -156,7 +235,7 @@
 
           <div class="feature-row reverse">
             <div class="feature-text reveal">
-              <h3>Task history & continuity</h3>
+              <h3>Task history &amp; continuity</h3>
               <p>Every conversation and action is preserved. Resume work days later with full context, or branch a new task from a previous one.</p>
             </div>
             <div class="feature-visual reveal">
@@ -170,7 +249,6 @@
       </div>
     </section>
 
-    <!-- How it works — glass panel -->
     <section id="how-it-works" class="section how glass-panel">
       <div class="container">
         <div class="section-header">
@@ -182,7 +260,7 @@
           <div class="step reveal">
             <div class="step-num">01</div>
             <h3>Install the extension</h3>
-            <p>Get Heinrich AI free from the <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" target="_blank" rel="noopener" style="color: var(--accent);">VS Code Marketplace</a>. Open it from the Activity Bar.</p>
+            <p>Get Heinrich AI free from the <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" target="_blank" rel="noopener" style="color: var(--accent);">VS Code Marketplace</a>. Optionally connect Overthink and Mila MCP servers.</p>
           </div>
           <div class="step reveal">
             <div class="step-num">02</div>
@@ -191,19 +269,18 @@
           </div>
           <div class="step reveal">
             <div class="step-num">03</div>
-            <h3>Review the plan & approve</h3>
+            <h3>Review the plan &amp; approve</h3>
             <p>Examine the steps, tools, and files the agent intends to touch. Nothing runs without your approval.</p>
           </div>
           <div class="step reveal">
             <div class="step-num">04</div>
-            <h3>Inspect & continue</h3>
+            <h3>Inspect &amp; continue</h3>
             <p>Review diffs, checkpoints, and the full action record. Iterate or start the next task with full context retained.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Philosophy -->
     <section id="philosophy" class="section philosophy">
       <div class="container">
         <div class="philosophy-inner">
@@ -232,13 +309,12 @@
       </div>
     </section>
 
-    <!-- CTA -->
     <section id="get-started" class="section cta">
       <div class="container">
         <div class="cta-box glass-panel reveal">
           <img src="Images/heinrich-logo.png" alt="" class="cta-logo" width="56" height="56" />
           <h2>Install Heinrich AI in VS Code</h2>
-          <p>Download the free extension from the Visual Studio Marketplace and start using an autonomous coding agent that plans, executes, and keeps you in control.</p>
+          <p>Download the free extension from the Visual Studio Marketplace. Pair it with Overthink and Mila for a full autonomous engineering stack.</p>
           <div class="cta-actions">
             <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Get it on VS Code Marketplace</a>
             <a href="https://github.com/missarii/Heinrich-AI" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">View on GitHub</a>
@@ -258,7 +334,9 @@
         <span>Heinrich AI</span>
       </div>
       <div class="footer-links" style="display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
-        <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">VS Code Marketplace</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Marketplace</a>
+        <a href="https://github.com/missarii/overthink" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Overthink</a>
+        <a href="https://github.com/missarii/Mila" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">Mila</a>
         <a href="https://github.com/missarii/Heinrich-AI" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">GitHub</a>
         <p class="footer-copy" style="margin: 0;">© 2026 Heinrich AI. Built for engineers who ship.</p>
       </div>
