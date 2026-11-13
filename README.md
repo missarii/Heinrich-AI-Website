@@ -2,25 +2,35 @@
 
 Official website for **Heinrich AI**, the autonomous coding agent for VS Code.
 
-## About Heinrich
+## Brand
 
-Heinrich is a VS Code extension that acts as a full autonomous coding agent. It plans tasks, executes tools, manages workspace context, supports multiple model providers, and keeps a recoverable history of every action.
+- **Name:** Heinrich AI (used consistently across the site)
+- **Logo:** `Images/heinrich-logo.png` (green emblem)
 
-This site presents the product in a clean, immersive dark experience.
+## Experience
+
+Cinematic dark landing page with:
+
+- Logo-integrated header, hero, CTA, and footer
+- Scroll-driven glass depth layers (parallax)
+- Soft 3D card lifts and floating visual panels
+- IntersectionObserver reveal animations
+- Ambient starfield tinted to the brand green
+- Glassmorphism panels and frosted header
 
 ## Structure
 
 ```
 .
-├── index.html    # Main landing page
-├── styles.css    # Design system & layout
-├── script.js     # Starfield + header interactions
+├── Images/
+│   └── heinrich-logo.png
+├── index.html
+├── styles.css
+├── script.js
 └── README.md
 ```
 
 ## Local preview
-
-Simply open `index.html` in a browser, or serve the folder:
 
 ```bash
 npx serve .
@@ -28,14 +38,9 @@ npx serve .
 python -m http.server 8000
 ```
 
-## Design notes
+Then open `http://localhost:3000` (or the port shown).
 
-- Dark, high-end aesthetic inspired by cinematic brand experiences
-- Subtle animated starfield background
-- Clean typography (Space Grotesk + Inter)
-- Fully responsive
+## Links
 
-## Repo
-
-- Website: [missarii/Heinrich-AI-Website](https://github.com/missarii/Heinrich-AI-Website)
-- Product (private): [missarii/Heinrich-AI](https://github.com/missarii/Heinrich-AI)
+- Website repo: [missarii/Heinrich-AI-Website](https://github.com/missarii/Heinrich-AI-Website)
+- Product: [missarii/Heinrich-AI](https://github.com/missarii/Heinrich-AI)
