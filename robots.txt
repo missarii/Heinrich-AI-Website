@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://heinrich-ai.surge.sh/sitemap.xml
+Sitemap: https://web.heinrich-ai.workers.dev/sitemap.xml
