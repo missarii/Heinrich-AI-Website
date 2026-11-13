@@ -2,6 +2,14 @@
 
 Official website for **Heinrich AI**, the autonomous coding agent for VS Code.
 
+## Install the product
+
+Heinrich AI is available as a free VS Code extension:
+
+**[Install from Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai)**
+
+Or search **“Heinrich AI”** in the VS Code Extensions view (`Ctrl+Shift+X` / `Cmd+Shift+X`).
+
 ## Brand
 
 - **Name:** Heinrich AI (used consistently across the site)
@@ -12,6 +20,7 @@ Official website for **Heinrich AI**, the autonomous coding agent for VS Code.
 Cinematic dark landing page with:
 
 - Logo-integrated header, hero, CTA, and footer
+- Primary CTAs that link to the VS Code Marketplace
 - Scroll-driven glass depth layers (parallax)
 - Soft 3D card lifts and floating visual panels
 - IntersectionObserver reveal animations
@@ -42,5 +51,6 @@ Then open `http://localhost:3000` (or the port shown).
 
 ## Links
 
+- **VS Code Extension:** [marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai](https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai)
 - Website repo: [missarii/Heinrich-AI-Website](https://github.com/missarii/Heinrich-AI-Website)
-- Product: [missarii/Heinrich-AI](https://github.com/missarii/Heinrich-AI)
+- Product source: [missarii/Heinrich-AI](https://github.com/missarii/Heinrich-AI)
