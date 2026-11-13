@@ -121,3 +121,13 @@ Or search **“Heinrich AI”** in the VS Code Extensions view (`Ctrl+Shift+X` /
 - **Website repo:** [missarii/Heinrich-AI-Website](https://github.com/missarii/Heinrich-AI-Website)
 - **Product source:** [missarii/Heinrich-AI](https://github.com/missarii/Heinrich-AI)
 - **Live site:** [heinrich-ai.surge.sh](https://heinrich-ai.surge.sh/)
+
+
+## 📞 Contacts
+
+| Platform | Link |
+|----------|------|
+| **LinkedIn** | [Heinrich AI Company](https://www.linkedin.com/company/heinrich-ai/) |
+| **Website** | [heinrich-ai.surge.sh](https://heinrich-ai.surge.sh/) |
+| **VS Code Extension** | [Install Extension](https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai) |
+
