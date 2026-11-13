@@ -4,24 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Heinrich AI — Autonomous Coding Agent</title>
-  <meta name="description" content="Heinrich is an autonomous coding agent for VS Code. Plan, act, and ship with intelligent task execution, multi-provider support, and deep workspace awareness." />
+  <meta name="description" content="Heinrich AI is the autonomous coding agent for VS Code. Plan, act, and ship with intelligent task execution, multi-provider support, and deep workspace awareness." />
+  <link rel="icon" type="image/png" href="Images/heinrich-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Ambient background -->
   <div class="bg-gradient"></div>
   <div class="bg-noise"></div>
   <canvas id="stars" aria-hidden="true"></canvas>
 
-  <!-- Header -->
-  <header class="header">
+  <!-- Cinematic glass depth layers -->
+  <div class="glass-layer glass-layer-1" aria-hidden="true"></div>
+  <div class="glass-layer glass-layer-2" aria-hidden="true"></div>
+  <div class="glass-layer glass-layer-3" aria-hidden="true"></div>
+
+  <header class="header" id="header">
     <div class="container header-inner">
-      <a href="#" class="logo">
-        <span class="logo-mark">H</span>
-        <span class="logo-text">Heinrich</span>
+      <a href="#" class="logo" aria-label="Heinrich AI home">
+        <img src="Images/heinrich-logo.png" alt="Heinrich AI logo" class="logo-img" width="36" height="36" />
+        <span class="logo-text">Heinrich AI</span>
       </a>
       <nav class="nav">
         <a href="#product">Product</a>
@@ -35,21 +39,24 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="container hero-content">
-        <p class="eyebrow">Autonomous Coding Agent</p>
+        <div class="hero-logo-wrap reveal">
+          <img src="Images/heinrich-logo.png" alt="Heinrich AI" class="hero-logo" width="96" height="96" />
+        </div>
+        <p class="eyebrow reveal">Autonomous Coding Agent</p>
         <h1 class="hero-title">
-          <span class="line">Code that thinks.</span>
-          <span class="line">Work that finishes.</span>
+          <span class="line reveal">Code that thinks.</span>
+          <span class="line reveal">Work that finishes.</span>
         </h1>
-        <p class="hero-sub">
-          Heinrich is the AI coding agent that lives inside VS Code.
+        <p class="hero-sub reveal">
+          Heinrich AI is the autonomous coding agent that lives inside VS Code.
           It plans, executes, and iterates — turning ambitious requests into
           working software while you stay in control.
         </p>
-        <div class="hero-cta">
-          <a href="#get-started" class="btn btn-primary btn-lg">Start with Heinrich</a>
-          <a href="#product" class="btn btn-ghost btn-lg">Explore the product</a>
+        <div class="hero-cta reveal">
+          <a href="#get-started" class="btn btn-primary btn-lg">Start with Heinrich AI</a>
+          <a href="#product" class="btn btn-ghost btn-lg btn-lg">Explore the product</a>
         </div>
       </div>
       <div class="hero-scroll">
@@ -58,36 +65,36 @@
       </div>
     </section>
 
-    <!-- Product -->
-    <section id="product" class="section product">
+    <!-- Product — glass panel -->
+    <section id="product" class="section product glass-panel">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow">The Product</p>
-          <h2>An agent that works inside your editor</h2>
-          <p class="section-desc">
-            Heinrich is not another chat window. It is a full autonomous agent
+          <p class="eyebrow reveal">The Product</p>
+          <h2 class="reveal">An agent that works inside your editor</h2>
+          <p class="section-desc reveal">
+            Heinrich AI is not another chat window. It is a full autonomous agent
             that understands your workspace, runs tools, manages tasks, and
             keeps a complete record of every action.
           </p>
         </div>
 
         <div class="product-grid">
-          <div class="product-card">
+          <div class="product-card reveal">
             <div class="card-icon">01</div>
             <h3>Plan & Act</h3>
             <p>Separate planning and execution modes let you review strategy before the agent starts changing code.</p>
           </div>
-          <div class="product-card">
+          <div class="product-card reveal">
             <div class="card-icon">02</div>
             <h3>Deep Workspace Awareness</h3>
-            <p>Heinrich sees your files, terminals, git state, and context. It works with the project you already have open.</p>
+            <p>Heinrich AI sees your files, terminals, git state, and context. It works with the project you already have open.</p>
           </div>
-          <div class="product-card">
+          <div class="product-card reveal">
             <div class="card-icon">03</div>
             <h3>Tool Execution</h3>
             <p>File edits, terminal commands, browser automation, MCP servers — all under your approval controls.</p>
           </div>
-          <div class="product-card">
+          <div class="product-card reveal">
             <div class="card-icon">04</div>
             <h3>Checkpoints & Recovery</h3>
             <p>Git-based checkpoints after every significant action. Resume interrupted tasks without losing progress.</p>
@@ -100,79 +107,79 @@
     <section id="features" class="section features">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow">Capabilities</p>
-          <h2>Built for serious engineering work</h2>
+          <p class="eyebrow reveal">Capabilities</p>
+          <h2 class="reveal">Built for serious engineering work</h2>
         </div>
 
         <div class="features-list">
           <div class="feature-row">
-            <div class="feature-text">
+            <div class="feature-text reveal">
               <h3>Multi-provider intelligence</h3>
               <p>Anthropic, OpenRouter, AWS Bedrock, Gemini, Cerebras, Ollama, LM Studio, and VS Code’s own models. Switch providers without changing how you work.</p>
             </div>
-            <div class="feature-visual">
-              <div class="visual-box">Providers</div>
+            <div class="feature-visual reveal">
+              <div class="visual-box glass-float">Providers</div>
             </div>
           </div>
 
           <div class="feature-row reverse">
-            <div class="feature-text">
+            <div class="feature-text reveal">
               <h3>MCP-native</h3>
-              <p>Connect external tools and data sources through the Model Context Protocol. Heinrich becomes the orchestration layer for your entire toolchain.</p>
+              <p>Connect external tools and data sources through the Model Context Protocol. Heinrich AI becomes the orchestration layer for your entire toolchain.</p>
             </div>
-            <div class="feature-visual">
-              <div class="visual-box">MCP Hub</div>
+            <div class="feature-visual reveal">
+              <div class="visual-box glass-float">MCP Hub</div>
             </div>
           </div>
 
           <div class="feature-row">
-            <div class="feature-text">
+            <div class="feature-text reveal">
               <h3>Streaming & real-time feedback</h3>
               <p>Watch the agent reason and act in real time. Partial updates, tool approval flows, and clear visibility into every step.</p>
             </div>
-            <div class="feature-visual">
-              <div class="visual-box">Live Stream</div>
+            <div class="feature-visual reveal">
+              <div class="visual-box glass-float">Live Stream</div>
             </div>
           </div>
 
           <div class="feature-row reverse">
-            <div class="feature-text">
+            <div class="feature-text reveal">
               <h3>Task history & continuity</h3>
               <p>Every conversation and action is preserved. Resume work days later with full context, or branch a new task from a previous one.</p>
             </div>
-            <div class="feature-visual">
-              <div class="visual-box">History</div>
+            <div class="feature-visual reveal">
+              <div class="visual-box glass-float">History</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How it works -->
-    <section id="how-it-works" class="section how">
+    <!-- How it works — glass panel -->
+    <section id="how-it-works" class="section how glass-panel">
       <div class="container">
         <div class="section-header">
-          <p class="eyebrow">Workflow</p>
-          <h2>From request to result</h2>
+          <p class="eyebrow reveal">Workflow</p>
+          <h2 class="reveal">From request to result</h2>
         </div>
 
         <div class="steps">
-          <div class="step">
+          <div class="step reveal">
             <div class="step-num">01</div>
             <h3>Describe the outcome</h3>
-            <p>Tell Heinrich what you want built, fixed, or explored. Natural language is enough.</p>
+            <p>Tell Heinrich AI what you want built, fixed, or explored. Natural language is enough.</p>
           </div>
-          <div class="step">
+          <div class="step reveal">
             <div class="step-num">02</div>
             <h3>Review the plan</h3>
             <p>In Plan mode, examine the steps, tools, and files the agent intends to touch before anything changes.</p>
           </div>
-          <div class="step">
+          <div class="step reveal">
             <div class="step-num">03</div>
             <h3>Approve & execute</h3>
-            <p>Switch to Act mode. Heinrich runs tools, edits files, and reports progress while you retain final control.</p>
+            <p>Switch to Act mode. Heinrich AI runs tools, edits files, and reports progress while you retain final control.</p>
           </div>
-          <div class="step">
+          <div class="step reveal">
             <div class="step-num">04</div>
             <h3>Inspect & continue</h3>
             <p>Review diffs, checkpoints, and the full action record. Iterate or start the next task with full context retained.</p>
@@ -185,23 +192,23 @@
     <section id="philosophy" class="section philosophy">
       <div class="container">
         <div class="philosophy-inner">
-          <p class="eyebrow">Philosophy</p>
-          <h2>An agent that stays honest</h2>
-          <p class="lead">
-            Heinrich is designed so you always understand what happened and why.
+          <p class="eyebrow reveal">Philosophy</p>
+          <h2 class="reveal">An agent that stays honest</h2>
+          <p class="lead reveal">
+            Heinrich AI is designed so you always understand what happened and why.
             Approvals are explicit. Actions are logged. Checkpoints are recoverable.
             The goal is not to replace the engineer — it is to amplify disciplined engineering.
           </p>
           <div class="principles">
-            <div class="principle">
+            <div class="principle reveal">
               <h4>Visible control</h4>
               <p>Sensitive actions require your confirmation. You remain the decision-maker.</p>
             </div>
-            <div class="principle">
+            <div class="principle reveal">
               <h4>Local-first context</h4>
               <p>Your workspace, secrets, and project state stay under your control.</p>
             </div>
-            <div class="principle">
+            <div class="principle reveal">
               <h4>Recoverable work</h4>
               <p>Git checkpoints and task history mean nothing is lost if a session is interrupted.</p>
             </div>
@@ -213,9 +220,10 @@
     <!-- CTA -->
     <section id="get-started" class="section cta">
       <div class="container">
-        <div class="cta-box">
+        <div class="cta-box glass-panel reveal">
+          <img src="Images/heinrich-logo.png" alt="" class="cta-logo" width="56" height="56" />
           <h2>Ready to work with an agent that finishes the job?</h2>
-          <p>Heinrich is currently in private development. Reach out to discuss early access, demos, or collaboration.</p>
+          <p>Heinrich AI is currently in private development. Reach out to discuss early access, demos, or collaboration.</p>
           <div class="cta-actions">
             <a href="mailto:hello@heinrich.ai" class="btn btn-primary btn-lg">Request early access</a>
             <a href="https://github.com/missarii/Heinrich-AI" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">View on GitHub</a>
@@ -228,7 +236,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo-mark">H</span>
+        <img src="Images/heinrich-logo.png" alt="Heinrich AI" class="logo-img" width="28" height="28" />
         <span>Heinrich AI</span>
       </div>
       <p class="footer-copy">© 2026 Heinrich AI. Built for engineers who ship.</p>
