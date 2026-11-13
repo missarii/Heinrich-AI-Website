@@ -115,19 +115,13 @@ Or search **“Heinrich AI”** in the VS Code Extensions view (`Ctrl+Shift+X` /
 
 ## Links
 
-- **VS Code Extension:** [marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai](https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai)
-- **Overthink MCP:** [github.com/missarii/overthink](https://github.com/missarii/overthink)
-- **Mila MCP / UI toolkit:** [github.com/missarii/Mila](https://github.com/missarii/Mila)
-- **Website repo:** [missarii/Heinrich-AI-Website](https://github.com/missarii/Heinrich-AI-Website)
-- **Product source:** [missarii/Heinrich-AI](https://github.com/missarii/Heinrich-AI)
-- **Live site:** [heinrich-ai.surge.sh](https://heinrich-ai.surge.sh/)
-
-
-## 📞 Contacts
-
 | Platform | Link |
 |----------|------|
+| **VS Code Extension** | [Install Extension](https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai) |
+| **Overthink MCP** | [github.com/missarii/overthink](https://github.com/missarii/overthink) |
+| **Mila MCP / UI toolkit** | [github.com/missarii/Mila](https://github.com/missarii/Mila) |
+| **Website repo** | [missarii/Heinrich-AI-Website](https://github.com/missarii/Heinrich-AI-Website) |
+| **Product source** | [missarii/Heinrich-AI](https://github.com/missarii/Heinrich-AI) |
+| **Live site** | [heinrich-ai.surge.sh](https://heinrich-ai.surge.sh/) |
 | **LinkedIn** | [Heinrich AI Company](https://www.linkedin.com/company/heinrich-ai/) |
 | **Website** | [heinrich-ai.surge.sh](https://heinrich-ai.surge.sh/) |
-| **VS Code Extension** | [Install Extension](https://marketplace.visualstudio.com/items?itemName=heinrich-ai.heinrich-ai) |
-
